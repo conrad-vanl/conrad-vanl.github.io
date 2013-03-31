@@ -1,0 +1,44 @@
+// HTML5 Boilerplate + Normalize
+//= require "_vendor/normalize.css"
+//= require "_vendor/html5bp.css"
+@import "_vendor/lesshat";
+
+// BOOTSTRAP
+@import "_bootstrap/bootstrap";
+
+// VARIABLES
+@glyphicons-font-path:    "/fonts";
+@font-family-sans-serif:  "proxima-nova", sans-serif;
+
+
+// BASE STYLES
+body, html { height: 100% !important; margin: 0; padding: 0; }
+body { 
+  background: #E4E7E7;
+}
+
+h1, h2, h3 { margin: 0; }
+h1, h2 {
+  color: #fff; 
+  font-size: 37px;
+  font-weight: 700;
+  text-shadow: rgba(0,0,0,.27) 0 1px 1px;
+}
+h3 {
+  font-size: 22px;
+  color: #fff;
+  opacity: .5;
+  font-family: "open-sans", @font-family-sans-serif;
+  font-weight: 600;
+  text-shadow: rgba(0,0,0,.53) 0 1px 1px;
+}
+h4 { }
+
+// MODULES 
+@import "_modules/page-header";
+@import "_modules/screen";
+
+// LAYOUTS
+@import "_layout/welcome"; 
+@import "_layout/callout";   
+@import "_layout/about"; 
