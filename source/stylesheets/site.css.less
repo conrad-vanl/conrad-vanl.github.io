@@ -4,11 +4,12 @@
 @import "_vendor/lesshat";
 
 // BOOTSTRAP
-@import "_bootstrap/bootstrap";
+@import "_bootstrap/bootstrap"; 
 
 // VARIABLES
 @glyphicons-font-path:    "/fonts";
 @font-family-sans-serif:  "proxima-nova", sans-serif;
+@secondary-sans-serif: "open-sans", @font-family-sans-serif;
 
 
 // BASE STYLES
@@ -28,7 +29,7 @@ h3 {
   font-size: 22px;
   color: #fff;
   opacity: .5;
-  font-family: "open-sans", @font-family-sans-serif;
+  font-family: @secondary-sans-serif;
   font-weight: 600;
   text-shadow: rgba(0,0,0,.53) 0 1px 1px;
 }
@@ -37,8 +38,8 @@ h4 { }
 // MODULES 
 @import "_modules/page-header";
 @import "_modules/screen";
-
+ 
 // LAYOUTS
-@import "_layout/welcome"; 
+@import "_layout/welcome";  
 @import "_layout/callout";   
 @import "_layout/about"; 
