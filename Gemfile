@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 gem "middleman", "~>3.0.5"
 gem "middleman-favicon-maker"
@@ -7,7 +7,9 @@ gem "middleman-livereload"
 gem "therubyracer"
 gem "redcarpet"
 gem "less"
-gem "wdm"
+#gem "wdm"
+gem "rb-inotify"
+#gem "libv8"
 
 gem "middleman-blog", "~> 3.2.0"
 

@@ -1,6 +1,15 @@
 // HTML5 Boilerplate + Normalize
 //= require "_vendor/normalize.css"
 //= require "_vendor/html5bp.css"
+
+//= depend_on "_vendor/lesshat"
+//= depend_on "_bootstrap/bootstrap"
+//= depend_on "_modules/page-header"
+//= depend_on "_modules/screen"
+//= depend_on "_layout/welcome"
+//= depend_on "_layout/callout"
+//= depend_on "_layout/about"
+
 @import "_vendor/lesshat";
 
 // BOOTSTRAP
@@ -24,7 +33,7 @@ h1, h2 {
   font-size: 37px;
   font-weight: 700;
   text-shadow: rgba(0,0,0,.27) 0 1px 1px;
-}
+} 
 h3 {
   font-size: 22px;
   color: #fff;
@@ -41,5 +50,5 @@ h4 { }
  
 // LAYOUTS
 @import "_layout/welcome";  
-@import "_layout/callout";   
+@import "_layout/callout";    
 @import "_layout/about"; 
