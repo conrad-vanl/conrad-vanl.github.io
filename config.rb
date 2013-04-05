@@ -1,6 +1,6 @@
 #Markdown
 
-activate :livereload
+#activate :livereload
 
 activate :blog do |blog|
   blog.prefix = "work"
@@ -15,8 +15,8 @@ activate :blog do |blog|
   # blog.day_link = ":year/:month/:day.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  blog.tag_template = nil
+  blog.calendar_template = nil
 
   # blog.paginate = true
   # blog.per_page = 10
@@ -104,4 +104,9 @@ configure :build do
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = "master"
 end
