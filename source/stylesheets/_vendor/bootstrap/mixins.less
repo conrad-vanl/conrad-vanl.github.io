@@ -302,6 +302,7 @@
     background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
     background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
     background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: radial-gradient(circle, @innerColor, @outerColor);
     background-repeat: no-repeat;
   }
   .striped(@color: #555, @angle: 45deg) {
@@ -346,7 +347,7 @@
 // -------------------------
 // Dividers (basically an hr) within dropdowns and nav lists
 .nav-divider(@top: #e5e5e5, @bottom: #fff) {
-  height: 1px;
+  height: 2px; // 1px for background, one for border
   margin: ((@line-height-base / 2) - 1) 0;
   overflow: hidden;
   background-color: @top;
@@ -407,11 +408,14 @@
 
 // Creates a wrapper for a series of columns
 .make-row() {
-  // Negative margin the row out to align the content of columns
-  margin-left:  (@grid-gutter-width / -2);
-  margin-right: (@grid-gutter-width / -2);
   // Then clear the floated columns
   .clearfix();
+
+  // Negative margin nested rows out to align the content of columns
+  .row {
+    margin-left:  (@grid-gutter-width / -2);
+    margin-right: (@grid-gutter-width / -2);
+  }
 }
 // Generate the columns
 .make-column(@columns) {
@@ -497,6 +501,24 @@
   .col-pull-X(@grid-columns);
 }
 
+// Small device grid
+.generate-small-grid-columns(@grid-columns) {
+
+  // Deterimine the classes
+  .col-small-span-X (@index) when (@index > 0) {
+    .col-small-span-@{index} { .col-small-span-(@index); }
+    .col-small-span-X((@index - 1));
+  }
+  .col-small-span-X(0) {}
+
+  // Specify widths
+  .col-small-span-(@columns) {
+    width: percentage((@columns / @grid-columns));
+  }
+
+  // Generate the CSS
+  .col-small-span-X(@grid-columns);
+}
 
 
 // Framework mixins

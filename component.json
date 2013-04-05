@@ -1,0 +1,9 @@
+{
+  "name": "conrad-vanl.github.com",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
