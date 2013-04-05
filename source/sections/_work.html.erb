@@ -1,11 +1,31 @@
-<div class="container work-container">
-
-<% page_articles.each_with_index do |article, i| %>
-  <article class="work-article">
-  <h2><%= article.title %></h2>
-  <h3><%= article.data.tags %></h3>
-  <%= article %>
-  </article>
-<% end %>
-
+<div class="container work-header-container">
+  <h2>Work</h2>
 </div>
+
+<section class="work-articles">
+  <% page_articles.each_with_index do |article, i| %>
+    <article class="work-article">
+
+        <div class="work-media-well" style="background-image:url(<%= article.data.media_well %>)"> </div>
+
+        <div class="work-article-container">
+
+          <div class="container">
+            <header class="article-header">
+              <h2><%= article.title %></h2>
+              <h3><%= article.data.tags %></h3>
+              <p><%= article.data.description %></p>
+            </header>
+          </div>
+
+          <div class="container">
+            <div class="article-body">
+              <%= article.body %>
+            </div>
+          </div>
+        </div>
+
+    </article>
+  <% end %>
+</section>
+
