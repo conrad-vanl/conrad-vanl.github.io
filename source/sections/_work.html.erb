@@ -6,7 +6,11 @@
   <% page_articles.each_with_index do |article, i| %>
     <article class="work-article">
 
-        <div class="work-media-well" style="background-image:url(<%= article.data.media_well %>)"> </div>
+        <div class="work-media-well" style="background-image:url(<%= article.data.media_well %>)">
+          <div class="loading" style="display:none" data-scroll-stream-loading>
+            Loading...
+          </div>
+        </div>
 
         <div class="work-article-container">
 
