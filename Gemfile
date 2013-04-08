@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+#gem "middleman-sprockets", "3.0.9"
 gem "middleman", "~>3.0.5"
 #gem "middleman-favicon-maker"
 #gem "middleman-livereload"

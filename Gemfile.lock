@@ -18,7 +18,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.10)
-    haml (4.0.1)
+    haml (4.0.2)
       tilt
     hike (1.2.1)
     http_router (0.10.2)
@@ -62,7 +62,7 @@ GEM
       padrino-helpers (= 0.10.7)
       sass (>= 3.1.20)
       uglifier (~> 1.2.6)
-    middleman-sprockets (3.0.10)
+    middleman-sprockets (3.0.9)
       middleman-more (>= 3.0.11)
       sprockets (~> 2.1, < 2.5)
       sprockets-sass (~> 0.9.1)
