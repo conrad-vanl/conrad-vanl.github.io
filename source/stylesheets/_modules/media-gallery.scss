@@ -1,0 +1,49 @@
+.media-gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  
+
+  .slide {
+    position: relative;
+    padding-bottom: 40px;
+    //@include makeRow();
+    @include clearfix();
+  }
+
+  .media {
+    position: relative;
+    @include makeRow();
+    overflow: visible;
+    //@include clearfix();
+  }
+
+  @media (max-width: 767px) {
+    .media { margin: 0; }
+  }
+
+  .stacked-large-small {
+    .stacked-large {
+      @include makeColumn(9);
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .stacked-small {
+      width: 31%;
+      min-width: 150px;
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+    }
+
+  }
+
+  .description {
+    clear: both;
+    max-width: 666px;
+    padding-top: 55px;
+    padding-bottom: 15px;
+  }
+
+}

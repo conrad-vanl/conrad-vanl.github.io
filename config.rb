@@ -1,6 +1,6 @@
 #Markdown
 
-#activate :livereload
+activate :livereload
 
 activate :blog do |blog|
   blog.prefix = "work"

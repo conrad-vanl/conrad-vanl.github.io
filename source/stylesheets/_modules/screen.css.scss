@@ -1,0 +1,50 @@
+.screen {
+  max-width: 100% !important;
+  @include border-radius(5px);
+  @include box-shadow(0 1px 5px rgba(0,0,0,.15));
+  margin-bottom: 10px;
+  cursor: pointer;
+  cursor: zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+
+  .screen-toolbar {
+   padding: 10px 10px 8px 10px;
+   @include border-radius(5px 5px 0 0);
+   background: #1c1c1c;
+  }
+
+  .screen-viewer, .screen-viewer img {
+    @include border-radius(0 0 5px 5px);
+  }
+
+  .screen-viewer img {
+    width: 100%;
+
+  }
+
+}
+
+
+// fullscreen preview
+.screen-full-overlay {
+  position: fixed;
+  z-index: 99999;
+  background: rgba(0,0,0,.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.screen-full {
+  position: absolute;
+  z-index: 900000;
+  cursor: pointer;
+  cursor: zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  top: 5px;
+  max-width: 85% !important;
+  left: 50%;  
+}
