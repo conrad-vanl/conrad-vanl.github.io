@@ -51,3 +51,51 @@
     top: 5px;
   }
 }
+
+.carousel-inner {
+
+  > .item {
+    display: none;
+    opacity: 0;
+    position: relative;
+    @include transition(.6s ease-in-out opacity, .6s ease-in-out left);
+
+  }
+
+  > .active,
+  > .next,
+  > .prev { display: block; }
+
+  > .active {
+    left: 0; opacity: 1;
+  }
+
+  > .next,
+  > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+  }
+
+  > .next {
+    left: 100%;
+  }
+  > .prev {
+    left: -100%;
+  }
+  > .next.left,
+  > .prev.right {
+    left: 0;
+  }
+
+  > .active.left {
+    left: -100%;
+    opacity: 0;
+  }
+  > .active.right {
+    left: 100%;
+    opacity: 0;
+  }
+
+}
