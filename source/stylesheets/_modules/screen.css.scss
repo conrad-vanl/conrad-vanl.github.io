@@ -35,6 +35,8 @@
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  @include transition(opacity 0.5s)
 }
 
 .screen-full {
@@ -45,6 +47,17 @@
   cursor: -moz-zoom-out;
   cursor: -webkit-zoom-out;
   top: 5px;
-  max-width: 95%;
+  opacity: 0;
+  @include transition(opacity 0.4s, top 0.4s, left 0.4s, width 0.4s)
+  //max-width: 95%;
 
 }
+
+.screen-full.active, .screen-full-overlay.active {
+  opacity: 1;
+}
+
+.screen-full.after-close {
+  display: none;
+}
+

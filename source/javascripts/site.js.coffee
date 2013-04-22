@@ -1,3 +1,11 @@
+#= require "vendor/greensock/TimelineLite.min.js"
+#= require "vendor/greensock/TweenMax.min.js"
+#= require "vendor/greensock/plugins/ScrollToPlugin.min.js"
+#= require "vendor/jquery.superscrollorama.js"
+#= require "vendor/jwerty.js"
+
 #= require "_bootstrap"
 #= require "modules/_work-articles"
 #= require "modules/_screen"
+#= require "modules/_scrollorama"
+#= require "modules/_scrollNav"
