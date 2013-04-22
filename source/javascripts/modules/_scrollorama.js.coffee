@@ -11,7 +11,7 @@ initScrollAnimations = () ->
       $("#welcome-wrapper").css("background-attachment", "fixed")
     onUnpin: -> 
       $("#welcome-wrapper").css("position","relative")
-      $("#welcome-wrapper").css("background-attachment", "inherit")
+      #$("#welcome-wrapper").css("background-attachment", "inherit")
     anim: new TimelineLite()
       .append([
         TweenMax.to($(".welcome-screens"), 1,
