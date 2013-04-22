@@ -1,9 +1,10 @@
 initScrollAnimations = () ->
   controller = $.superscrollorama()
+  $("body").css("overflow","auto")
   #controller.addTween(".welcome-header", TweenMax.to($(".welcome-header"), .5, {css:{opacity:1}}))
 
   # Welcome Wrapper
-  controller.pin($("#welcome-wrapper"), 850, {
+  controller.pin($("#welcome-wrapper"), 550, {
     offset: 1
     onPin: -> 
       $("#welcome-wrapper").css("right",0)
@@ -90,6 +91,7 @@ initScrollAnimations = () ->
 
 (new TimelineLite({onComplete:initScrollAnimations}))
   .append([
+    TweenLite.to(window, 1, {scrollTo:{y:0}})
     TweenMax.from( $('.welcome-header'), 1.5, {css:{marginTop:"-300px", zoom: 10}}, ease: Quad.easeInOut)
     TweenMax.to( $('.welcome-header'), 2, {delay: 1, css:{opacity:1, visibility: "visible"}}, ease: Quad.easeInOut)
   ]).play()

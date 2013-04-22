@@ -2,10 +2,10 @@ source "https://rubygems.org"
 
 #gem "middleman-sprockets", "3.0.9"
 gem "compass"
-gem "bootstrap-sass"
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem "middleman"
 #gem "middleman-favicon-maker"
-gem "middleman-livereload"
+#gem "middleman-livereload"
 #gem "susy", "~>1.0.5"
 #gem "therubyracer", "0.11.0beta1"
 #gem "redcarpet"
@@ -16,7 +16,7 @@ gem "middleman-livereload"
 #gem "wdm"
 #gem "rb-inotify"
 #gem "libv8"
-gem "wdm"
+#gem "wdm"
 gem "middleman-blog", "~> 3.2.0"
 
 # For feed.xml.builder

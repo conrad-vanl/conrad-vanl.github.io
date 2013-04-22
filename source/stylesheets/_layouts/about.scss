@@ -35,7 +35,7 @@
     text-align: center;
     margin: 0px auto;
     //max-width: 535px;
-    @include makeRow();
+    @include make-row();
     li {
       //margin-left: 20px;
       //margin-right: 20px;
@@ -47,7 +47,7 @@
       margin-bottom: 60px;
       @include box-sizing(border-box);
       @include background-clip(content-box);
-      @include makeColumn(4);
+      @include make-column(4);
       padding: 0 30px;
     }
 

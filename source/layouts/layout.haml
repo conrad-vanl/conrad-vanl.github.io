@@ -23,6 +23,7 @@
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
     :javascript
       window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.9.1.min.js"><\/script>')
+      $("body").css("overflow","hidden");     
       $(".container").children().css("opacity","0")
       $(".container").children().css("visibility","hidden")
 
@@ -31,9 +32,3 @@
       try{Typekit.load();}catch(e){}
 
     = javascript_include_tag "site"
-    
-    :javascript
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
