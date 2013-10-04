@@ -1,6 +1,5 @@
 #Markdown
-
-activate :livereload
+activate :livereload, :host => '127.0.0.1'
 
 activate :blog do |blog|
   blog.prefix = "work"

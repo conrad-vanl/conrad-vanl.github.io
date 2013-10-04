@@ -1,0 +1,218 @@
+// VARIABLES
+
+$brand-purple: #6c6b8f
+$brand-yellow: #f0f8cc
+
+// bootstrap brand-colors:
+//$brand-primary:         $brand-red;
+//$brand-success:         $brand-green;
+//$brand-warning:         $brand-yellow;
+//$brand-danger:          $red;
+//$brand-info:            $brand-blue;
+
+// fonts
+$font-family-sans-serif:  "proxima-nova", sans-serif
+$font-family-serif:       "museo-slab", serif
+$font-family-base:        $font-family-sans-serif
+$font-size-base:          14px
+$font-family-brand: "kaushan_scriptregular"
+
+$grid-gutter-width: 20px
+
+// VENDOR
+@import "compass"
+@import "bootstrap"
+@import "_fontello/fontello"
+
+// BASE STYLES
+body, html 
+  height: 100%
+  margin: 0
+  padding: 0
+
+body
+  background: #15181a
+  color: #fff
+
+.background-container
+  z-index: -1
+  position: absolute
+  top: -50%
+  left: 0
+  right: 0
+  height: 300%
+  min-height: 1530px
+  background: url(../images/background.jpg) no-repeat 
+    position: center
+    size: cover
+
+.wrapper
+  z-index: 1
+  position: relative
+
+@mixin animate
+  @include transition(all 0.3s)
+
+a, btn
+  @include animate()
+
+// BASE HEADER STYLES
+h1
+  font-family: $font-family-serif
+  font-size: 60px
+  color: $brand-purple
+
+h2
+  font-size: 15px
+  color: #fff
+  @include text-shadow(0 1px rgba(0,0,0,.20))
+  font-weight: 600
+  text-transform: uppercase
+  margin-top: 0
+  margin-bottom: 16px
+
+h3
+  color: #64676f
+  font-size: 15px
+  font-weight: 600
+
+// BASE BUTTON STYLES
+.btn
+  border-radius: 6px
+  min-width: 100px
+  padding: 6px 15px
+
+.btn-default
+  background: none
+  font-size: 13px
+  color: #fff
+  @include text-shadow(0 1px rgba(0,0,0,.20))
+  font-weight: 700
+  text-transform: uppercase
+  border-color: rgba(255,255,255,.2)
+
+  &:hover, &:active
+    color: $brand-purple
+    background: rgba(255,255,255,.9)
+    border-color: rgba(255,255,255,0)
+    @include text-shadow(0 1px rgba(0,0,0,0))
+
+// BASE MISC STYLES
+.header-icon
+  font-size: 35px
+  color: rgba(255,255,255,.50)
+
+// LAYOUTS
+
+// start
+#start
+  text-align: center
+  height: 100%
+  min-height: 180px
+
+  .start-container
+    height: 100%
+    position: relative
+
+
+.conrad-intro
+  height: 174px
+  position: absolute
+  margin: 0px auto
+    top: -88px
+  top: 50%
+  left: 0
+  right: 0
+
+  h1
+    margin: 0
+    padding: 0
+
+    span
+      margin: 0 -1px
+
+      &.char2, &.char5
+        margin: 0 -2px
+
+      &.char7
+        margin-left: -3px
+
+  h2
+    color: #883806
+    text-transform: none
+    font-size: 22px
+    font-weight: 600
+    opacity: 0.5
+    margin-top: 0
+    padding-top: 0
+
+    span
+      margin: 0 -0.2px
+
+  .conrad-intro-more-btn
+    padding-top: 40px
+
+    .btn 
+      border-color: $brand-yellow
+
+// profile
+#profile
+  text-align: center
+
+  p 
+    font-size: 20px
+    font-weight: 600
+    color: rgba(255,255,255,.7)
+    line-height: 24px
+    padding-bottom: 10px
+
+.profile-bits
+  padding-top: 100px
+  @include make-row()
+
+  .profile-bit
+    @include make-md-column(4, 60px)
+    padding-top: 40px
+
+    .btn
+      margin-bottom: 25px
+
+.connect
+  padding-top: 80px
+
+  .connect-nav
+    background: url(../images/1-20.png) repeat-x center
+    max-width: 720px
+    @include make-row()
+    margin: 0px auto
+
+    li
+      @include make-xs-column(3)
+      text-align: center
+
+      a
+        display: inline-block
+        width: 74px
+        height: 74px
+        line-height: 77px
+        padding: 0
+        border-radius: 37px
+        font-size: 30px
+        color: rgba(255,255,255,.7)
+
+      &.connect-dribbble a
+        background: #99678a
+        &:hover
+          background: adjust-saturation(lighten(#99678a, 10%), 10%)
+      &.connect-github a
+        background: #848ca1
+        &:hover
+          background: adjust-saturation(lighten(#848ca1, 10%), 10%)
+      &.connect-linkedin a
+        background: #50679e
+        &:hover
+          background: adjust-saturation(lighten(#50679e, 10%), 10%)
+      &.connect-email a
+        background: #d5ac6f
+        &:hover
+          background: adjust-saturation(lighten(#d5ac6f, 10%), 10%)
