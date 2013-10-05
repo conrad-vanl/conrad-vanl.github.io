@@ -3,7 +3,7 @@ activate :livereload, :host => '127.0.0.1'
 
 activate :blog do |blog|
   blog.prefix = "work"
-  blog.permalink = ":year/:title.html"
+  blog.permalink = ":title.html"
   blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   blog.layout = "layouts/work_layout"
