@@ -1,21 +1,29 @@
 <div class="work-container container">
 
-  <h2>a mix of my interactive work</h2>
-  <h3>and other things I take credit for</h3>
+  <h2>some of my work</h2>
+  <h3>including interactive, video, print, photography, and other things I take credit for</h3>
 
-  <!--<% blog.articles.each_with_index do |article, i| %>
-    <div class="work-article">
-      <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-    </div>
-  <% end %>-->
 
   <div class="work-articles">
-    <% 14.times do |i| %>
+    <% blog.articles.each_with_index do |article, i| %>
+
       <div class="work-article">
-        <a href="#">
-          <img src="images/mac-screen.jpg">
-        </a>
+        <% link_to article.data.link_url do %>
+          <div class="img-container"><%= image_tag article.data.preview_url %></div>
+
+          <div class="caption-container">
+            <div class="caption">
+              <% if article.data.icon_class %>
+                <i class="work-article-icon <%= article.data.icon_class %>"> </i>
+              <% end %>
+
+              <h3 class="title"><%= article.data.title %></h3>
+              <p class="tags"><%= article.data.tags %></p>
+            </div>
+          </div>
+        <% end %>
       </div>
+
     <% end %>
   </div>
 
