@@ -22,15 +22,20 @@
             </div>
           </div>
 
-          <% if article.data.preview_large %>
+          <% if article.data.preview_large or article.data.preview_html %>
             <div class="mockup-preview-container">
               <div class="mockup-preview">
                 <div class="mockup-preview-inner">
-                  <img src="<%= article.data.preview_large_url %>">
+                  <% if article.data.preview_html %>
+                    <%= article.body %>
+                  <% else %>
+                    <img src="<%= article.data.preview_large_url %>">
+                  <% end %>
                 </div>
               </div>
             </div>
           <% end %>
+
         <% end %>
       </div>
 
@@ -44,9 +49,14 @@
   <div class="container">
     <div class="mockup-preview-controls-header navbar-brand hidden-xs" data-mockup-preview-title></div>
 
+    <ul class="nav navbar-nav navbar-left">
+      <li><a class="btn btn-default navbar-btn" target="_blank" data-mockup-preview-link>View</a></li>
+    </ul>
+
+
     <ul class="nav navbar-nav navbar-right">
-      <li><a class="btn btn-default navbar-btn" target="_blank" data-mockup-preview-link>View Project</a></li>
       <li><a class="btn btn-primary navbar-btn" data-mockup-preview-next>Next Project</a></li>
+      <li><a class="close" href="#" data-mockup-preview-close>×</a></li>
     </ul>
 
     <ul class="nav navbar-nav preview-controls navbar-right hidden-xs" data-mockup-preview-items="li"></ul>   

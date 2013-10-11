@@ -25,6 +25,8 @@ $.fn.mockupPreview = ( action, options ) ->
       $(".mockup-preview-trigger.active").mockupPreview("hide", settings)
 
       scrollPos = $(window).scrollTop()
+      $e.one "mockup-preview-deactivate", ->
+        $.smoothScroll(scrollPos)
       
       $inner = $e.find(settings.inner)
       return if !$inner or $inner.hasClass("in")
@@ -38,7 +40,6 @@ $.fn.mockupPreview = ( action, options ) ->
         e.preventDefault()
         e.stopPropagation()
         $e.mockupPreview("hide", settings)
-        $.smoothScroll(scrollPos)
 
     hide: (element) ->      
       $e = $(element)
@@ -87,6 +88,11 @@ $.fn.mockupPreview = ( action, options ) ->
         controls.find("[data-mockup-preview-title]").html($e.attr("data-mockup-preview-title"))
         # hook-up link
         controls.find("[data-mockup-preview-link]").attr("href", $e.attr("href"))
+        if !$e.attr("href") or $e.attr("href") is "#"
+          controls.find("[data-mockup-preview-link]").hide()
+        else
+          controls.find("[data-mockup-preview-link]").show()
+
         # hook-up next link
         pos = elements.index($e) || elements.index(e.target)
         if pos >= 0
@@ -110,6 +116,14 @@ $.fn.mockupPreview = ( action, options ) ->
         item = $($(this).attr("href"))
         return if !item or item.hasClass("active")
         item.mockupPreview("show", settings)
+
+      # setup close link observer
+      controls.find("[data-mockup-preview-close]").on "click", (e) ->
+        e.preventDefault()
+        e.stopPropagation()
+        item = $(controls.find(".active").attr("href"))
+        return if !item
+        item.mockupPreview("hide", settings)
 
       controls.appendTo $("body")
 
@@ -198,6 +212,7 @@ throttle = (target, method, wait) ->
     throttling = true
     result
 
+# style fix - fade out nav when scrolling to high
 $(window).on "scroll", throttle(->
   active = $(".work-articles a.active")
   return if active.length is 0
@@ -211,3 +226,12 @@ $(window).on "scroll", throttle(->
     if !controls.hasClass("in")
       controls.removeClass("out").addClass("in")
 , 200)
+
+# style fix - adjust iframe height automatically 16:9 ratio
+$(".mockup-preview-container").has("iframe").parent("a").on "mockup-preview-activate", ->
+  iframe = $(this).find("iframe")
+  iframe.height $(this).parents(".container").first().width() * (9/16)
+
+$(".mockup-preview-container").has("iframe").parent("a").on "mockup-preview-deactivate", ->
+  iframe = $(this).find("iframe")
+  iframe.height $(this).height()

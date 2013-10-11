@@ -65,9 +65,13 @@
   cursor: -moz-zoom-out
   cursor: -webkit-zoom-out
 
-  img
+  img, iframe
+    width: 100%
     @include box-shadow(0 0 400px 200px rgba(0, 0, 0, .5))
     border: 1px solid rgba(0,0,0,.8)
+
+  iframe
+    @include transition(height 0.3s)
 
   &.in
     display: block
@@ -98,6 +102,13 @@
 
   &.out
     @include animation(mockupControlsOut 0.3s both) 
+
+  .close
+    text-shadow: none
+    opacity: 0.6
+
+    &:hover
+      opacity: 1
 
   .preview-controls 
     padding-left: 30px
