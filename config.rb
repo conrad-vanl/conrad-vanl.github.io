@@ -1,6 +1,8 @@
 #Markdown
 activate :livereload, :host => '127.0.0.1'
 
+sprockets.append_path File.join "#{root}", "bower_components"
+
 activate :blog do |blog|
   blog.prefix = "work"
   blog.permalink = ":title.html"

@@ -23,6 +23,7 @@
 .icon-trophy:before { content: '\e81f'; } /* '' */
 .icon-monitor:before { content: '\e81d'; } /* '' */
 .icon-mobile:before { content: '\e81e'; } /* '' */
+.icon-dot:before { content: '\e806'; } /* '' */
 .icon-github:before { content: '\e820'; } /* '' */
 .icon-vimeo:before { content: '\e822'; } /* '' */
 .icon-twitter:before { content: '\e823'; } /* '' */

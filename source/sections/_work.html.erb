@@ -8,7 +8,7 @@
     <% blog.articles.each_with_index do |article, i| %>
 
       <div class="work-article">
-        <% link_to article.data.link_url do %>
+        <% link_to article.data.link_url, "data-mockup-preview-title" => article.data.title, "id" => "work-article-#{article.slug}" do %>
           <div class="img-container"><%= image_tag article.data.preview_url %></div>
 
           <div class="caption-container">
@@ -21,10 +21,34 @@
               <p class="tags"><%= article.data.tags %></p>
             </div>
           </div>
+
+          <% if article.data.preview_large %>
+            <div class="mockup-preview-container">
+              <div class="mockup-preview">
+                <div class="mockup-preview-inner">
+                  <img src="<%= article.data.preview_large_url %>">
+                </div>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
 
     <% end %>
+
   </div>
 
 </div>
+
+<nav class="mockup-preview-controls navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="mockup-preview-controls-header navbar-brand hidden-xs" data-mockup-preview-title></div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="btn btn-default navbar-btn" target="_blank" data-mockup-preview-link>View Project</a></li>
+      <li><a class="btn btn-primary navbar-btn" data-mockup-preview-next>Next Project</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav preview-controls navbar-right hidden-xs" data-mockup-preview-items="li"></ul>   
+  </div>
+</nav>
