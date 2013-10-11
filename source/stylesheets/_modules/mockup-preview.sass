@@ -1,0 +1,132 @@
+// keyframes mixin
+@mixin keyframes($animation_name)
+  @-webkit-keyframes #{$animation_name}
+    @content
+
+  @-moz-keyframes #{$animation_name}
+    @content
+
+  @-o-keyframes #{$animation_name}
+    @content
+
+  @keyframes #{$animation_name}
+    @content
+
+@mixin animation($animation...)
+  -webkit-animation: $animation
+  animation: $animation
+
+// use of keyframes mixin
+@include keyframes(mockupIn)
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+// use of keyframes mixin
+@include keyframes(mockupOut)
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+// use of keyframes mixin
+@include keyframes(mockupControlsIn)
+  from
+    top: -51px
+    opacity: 0
+  to
+    opacity: 1
+    top: 0
+
+// use of keyframes mixin
+@include keyframes(mockupControlsOut)
+  from
+    top: 0
+    opacity: 1
+  to
+    top: -51px
+    opacity: 0
+
+
+
+.mockup-preview
+  @include transition(all 0.3s)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 1040
+
+  opacity: 0
+  display: none
+
+  cursor: zoom-out
+  cursor: -moz-zoom-out
+  cursor: -webkit-zoom-out
+
+  img
+    @include box-shadow(0 0 400px 200px rgba(0, 0, 0, .5))
+    border: 1px solid rgba(0,0,0,.8)
+
+  &.in
+    display: block
+    @include animation(mockupIn 0.6s both)
+
+  &.out
+    @include animation(mockupOut 0.6s both) 
+
+.mockup-preview-backdrop
+
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1030
+  //background: rgba(0,0,0,.5)
+
+.mockup-preview-controls
+  z-index: 1050
+  position: fixed
+  background: rgba(21,24,26,.95)
+  display: none
+
+  &.in
+    display: block
+    @include animation(mockupControlsIn 0.3s both)
+
+  &.out
+    @include animation(mockupControlsOut 0.3s both) 
+
+  .preview-controls 
+    padding-left: 30px
+
+    li 
+      margin-left: -17px
+
+    a, li 
+      padding: 0
+
+    a:hover, a.active
+      color: #fff
+
+    a:before
+      content: '\e806'
+      font-family: "fontello"
+      font-style: normal
+      font-weight: normal
+      speak: none
+      display: inline-block
+      text-decoration: inherit
+      width: 1em
+      margin-right: .2em
+      text-align: center
+      font-variant: normal
+      text-transform: none
+      line-height: 49px
+      margin-left: .2em
+      font-size: 27px
+
+  .navbar-nav .btn
+    padding: 5px 10px
