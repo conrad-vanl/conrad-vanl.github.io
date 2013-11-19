@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2013-10-07T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Lacey &amp;amp; Conrad - Save the Dates</title>
+    <link rel="alternate" href="/work/wedding-std.html"/>
+    <id>/work/wedding-std.html</id>
+    <published>2013-10-07T00:00:00Z</published>
+    <updated>2013-10-07T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Healthnut Mockup</title>
+    <link rel="alternate" href="/work/healthnut.html"/>
+    <id>/work/healthnut.html</id>
+    <published>2013-05-05T00:00:00Z</published>
+    <updated>2013-05-05T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Fitness First Clubs Mobile</title>
+    <link rel="alternate" href="/work/fitnessfirst-mobile.html"/>
+    <id>/work/fitnessfirst-mobile.html</id>
+    <published>2013-04-02T00:00:00Z</published>
+    <updated>2013-04-02T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Fitness First Clubs</title>
+    <link rel="alternate" href="/work/fitnessfirst.html"/>
+    <id>/work/fitnessfirst.html</id>
+    <published>2013-03-30T00:00:00Z</published>
+    <updated>2013-03-30T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Koehler + Zachary</title>
+    <link rel="alternate" href="/work/koehler-zachary.html"/>
+    <id>/work/koehler-zachary.html</id>
+    <published>2013-03-25T00:00:00Z</published>
+    <updated>2013-03-25T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe src="//player.vimeo.com/video/44180735" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Acts of Sharing</title>
+    <link rel="alternate" href="/work/acts-of-sharing.html"/>
+    <id>/work/acts-of-sharing.html</id>
+    <published>2013-02-25T00:00:00Z</published>
+    <updated>2013-02-25T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;iframe src="//player.vimeo.com/hubnut/album/1920680?color=44bbff&amp;amp;background=000000&amp;amp;slideshow=0&amp;amp;video_title=1&amp;amp;video_byline=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+</feed>
