@@ -21,6 +21,28 @@
     <content type="html"></content>
   </entry>
   <entry>
+    <title>Lake Tahoe</title>
+    <link rel="alternate" href="/work/tahoe.html"/>
+    <id>/work/tahoe.html</id>
+    <published>2013-07-04T00:00:00Z</published>
+    <updated>2013-07-04T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>The Fox</title>
+    <link rel="alternate" href="/work/the-fox.html"/>
+    <id>/work/the-fox.html</id>
+    <published>2013-05-05T00:00:00Z</published>
+    <updated>2013-05-05T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
     <title>Healthnut Mockup</title>
     <link rel="alternate" href="/work/healthnut.html"/>
     <id>/work/healthnut.html</id>
@@ -32,7 +54,7 @@
     <content type="html"></content>
   </entry>
   <entry>
-    <title>Fitness First Clubs Mobile</title>
+    <title>Fitness First Clubs</title>
     <link rel="alternate" href="/work/fitnessfirst-mobile.html"/>
     <id>/work/fitnessfirst-mobile.html</id>
     <published>2013-04-02T00:00:00Z</published>
@@ -40,18 +62,18 @@
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html"></content>
-  </entry>
-  <entry>
-    <title>Fitness First Clubs</title>
-    <link rel="alternate" href="/work/fitnessfirst.html"/>
-    <id>/work/fitnessfirst.html</id>
-    <published>2013-03-30T00:00:00Z</published>
-    <updated>2013-03-30T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html"></content>
+    <content type="html">&lt;div class="work-section background-6" style="max-height: 475px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;img src="/images/work/fitnessfirst/placeit.png"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="work-section"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Fitness First Health Clubs&lt;/h2&gt;
+    &lt;h3&gt;Creative direction and development&lt;/h3&gt;
+    &lt;a href="http://fitnessfirstclubs.com" class="btn btn-default" target="_blank"&gt;visit&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content>
   </entry>
   <entry>
     <title>Koehler + Zachary</title>
@@ -63,16 +85,5 @@
       <name>Article Author</name>
     </author>
     <content type="html">&lt;iframe src="//player.vimeo.com/video/44180735" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Acts of Sharing</title>
-    <link rel="alternate" href="/work/acts-of-sharing.html"/>
-    <id>/work/acts-of-sharing.html</id>
-    <published>2013-02-25T00:00:00Z</published>
-    <updated>2013-02-25T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;iframe src="//player.vimeo.com/hubnut/album/1920680?color=44bbff&amp;amp;background=000000&amp;amp;slideshow=0&amp;amp;video_title=1&amp;amp;video_byline=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
