@@ -5,10 +5,32 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-10-07T00:00:00Z</updated>
+  <updated>2013-10-08T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Chulado Interactive</title>
+    <link rel="alternate" href="/work/chulado.html"/>
+    <id>/work/chulado.html</id>
+    <published>2013-10-08T00:00:00Z</published>
+    <updated>2013-10-08T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div class="work-section background-11" style="max-height: 680px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;img src="/images/work/chulado-large.png"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="work-section"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Chulado Web Agency&lt;/h2&gt;
+    &lt;h3&gt;Creative direction and design&lt;/h3&gt;
+    &lt;a href="http://chulado.com" class="btn btn-default" target="_blank"&gt;coming soon&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>Lacey &amp;amp; Conrad - Save the Dates</title>
     <link rel="alternate" href="/work/wedding-std.html"/>
@@ -74,16 +96,5 @@
     &lt;a href="http://fitnessfirstclubs.com" class="btn btn-default" target="_blank"&gt;visit&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Koehler + Zachary</title>
-    <link rel="alternate" href="/work/koehler-zachary.html"/>
-    <id>/work/koehler-zachary.html</id>
-    <published>2013-03-25T00:00:00Z</published>
-    <updated>2013-03-25T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;iframe src="//player.vimeo.com/video/44180735" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
