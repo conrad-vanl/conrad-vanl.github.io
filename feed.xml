@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2014-02-13T00:00:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>CRS Flooring America</title>
+    <link rel="alternate" href="/work/crs.html"/>
+    <id>/work/crs.html</id>
+    <published>2014-02-13T00:00:00Z</published>
+    <updated>2014-02-13T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Chulado Interactive</title>
+    <link rel="alternate" href="/work/chulado.html"/>
+    <id>/work/chulado.html</id>
+    <published>2013-10-08T00:00:00Z</published>
+    <updated>2013-10-08T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;div class="work-section background-11" style="max-height: 680px;"&gt;
+  &lt;div class="container"&gt;
+    &lt;img src="/images/work/chulado-large.png"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="work-section"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2&gt;Chulado Web Agency&lt;/h2&gt;
+    &lt;h3&gt;Creative direction and design&lt;/h3&gt;
+    &lt;a href="http://chulado.com" class="btn btn-default" target="_blank"&gt;coming soon&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>Lacey &amp;amp; Conrad - Save the Dates</title>
+    <link rel="alternate" href="/work/wedding-std.html"/>
+    <id>/work/wedding-std.html</id>
+    <published>2013-10-07T00:00:00Z</published>
+    <updated>2013-10-07T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Lake Tahoe</title>
+    <link rel="alternate" href="/work/tahoe.html"/>
+    <id>/work/tahoe.html</id>
+    <published>2013-07-04T00:00:00Z</published>
+    <updated>2013-07-04T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>The Fox</title>
+    <link rel="alternate" href="/work/the-fox.html"/>
+    <id>/work/the-fox.html</id>
+    <published>2013-05-05T00:00:00Z</published>
+    <updated>2013-05-05T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Healthnut Mockup</title>
+    <link rel="alternate" href="/work/healthnut.html"/>
+    <id>/work/healthnut.html</id>
+    <published>2013-05-05T00:00:00Z</published>
+    <updated>2013-05-05T00:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html"></content>
+  </entry>
+</feed>
