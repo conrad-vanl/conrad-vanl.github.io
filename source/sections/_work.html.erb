@@ -1,14 +1,15 @@
+
+
 <div class="work-container container">
 
-  <h2>some of my work</h2>
-  <h3>including interactive, video, print, photography, and other things I take credit for</h3>
-
+  <h2>Shots</h2>
+  <h3>works in progress, photography, and other misc work</h3>
 
   <div class="work-articles">
-    <% blog.articles.each_with_index do |article, i| %>
+    <% blog.articles.take(24).each_with_index do |article, i| %>
 
-      <div class="work-article">
-        <% link_to article.data.link_url, "data-mockup-preview-title" => article.data.title, "id" => "work-article-#{article.slug}" do %>
+      <div class="work-article" data-mockup-preview-title="<%=article.data.title%> <small><%=article.data.tags%></small>" id="work-article-<%=article.slug%>">
+        <div class="work-article-target">
           <div class="img-container"><%= image_tag article.data.preview_url %></div>
 
           <div class="caption-container">
@@ -21,29 +22,29 @@
               <p class="tags"><%= article.data.tags %></p>
             </div>
           </div>
+        </div>
 
-          <% if article.data.preview_large or article.data.preview_html %>
-            <div class="mockup-preview-container">
-              <div class="mockup-preview">
-                <div class="mockup-preview-inner">
-                  <% if article.data.preview_html %>
-                    <%= article.body %>
-                  <% else %>
-                    <img src="<%= article.data.preview_large_url %>">
-                  <% end %>
-                </div>
+        <div data-preview-for="#<%= "work-article-#{article.slug}"%>" class="mockup-preview-container">
+          <div class="mockup-preview">
+            <div class="mockup-preview-inner">
+              <div class="container">
+                <% if !article.body || article.body.length <= 3 %>
+                  <img src="<%= article.data.preview_large_url || article.data.large_url %>">
+                <% else %>
+                  <%= article.body %>
+                <% end %>
               </div>
             </div>
-          <% end %>
-
-        <% end %>
+          </div>
+        </div>
+        
       </div>
-
+      
     <% end %>
-
   </div>
 
 </div>
+
 
 <nav class="mockup-preview-controls navbar navbar-default navbar-fixed-top navbar-inverse">
   <div class="container">
@@ -55,10 +56,10 @@
 
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a class="btn btn-primary navbar-btn" data-mockup-preview-next>Next Project</a></li>
+      <li><a class="btn btn-primary navbar-btn next" data-mockup-preview-next>Next <i class="icon icon-right-open"> </i></a></li>
       <li><a class="close" href="#" data-mockup-preview-close>×</a></li>
     </ul>
 
-    <ul class="nav navbar-nav preview-controls navbar-right hidden-xs" data-mockup-preview-items="li"></ul>   
+    <ul class="nav navbar-nav preview-controls navbar-right hidden-xs hidden-sm" data-mockup-preview-items="li"></ul>   
   </div>
 </nav>

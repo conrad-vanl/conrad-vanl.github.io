@@ -8,8 +8,8 @@ $.fn.mockupPreview = ( action, options ) ->
     backdropClass: "mockup-preview-backdrop"
     controls: $(".mockup-preview-controls")
     showCSS:
-      width: -> $(".work-articles").width()
-      left: -> ($(this).offset().left - $(".work-articles").offset().left) * -1
+      width: -> $(window).width() #$(".work-articles").width()
+      left:  -> $(this).offset().left * -1
     hideCSS:
       width: "100%"
       left: 0
@@ -31,15 +31,15 @@ $.fn.mockupPreview = ( action, options ) ->
       $inner = $e.find(settings.inner)
       return if !$inner or $inner.hasClass("in")
 
-      $.smoothScroll($e.offset().top - 70)
+      $.smoothScroll($e.offset().top - 50)
       $e.addClass("active")
       $inner.removeClass("out").addClass("in").css(settings.showCSS) #.one animationEndPrefixes, -> #$inner.removeClass("out")
       $e.trigger("mockup-preview-activate")
 
-      $inner.one settings.hideOn, (e) -> 
-        e.preventDefault()
-        e.stopPropagation()
-        $e.mockupPreview("hide", settings)
+      #$inner.one settings.hideOn, (e) -> 
+      #  e.preventDefault()
+      #  e.stopPropagation()
+      #  $e.mockupPreview("hide", settings)
 
     hide: (element) ->      
       $e = $(element)
@@ -65,7 +65,7 @@ $.fn.mockupPreview = ( action, options ) ->
         elementName = list.attr("data-mockup-preview-items") or "li"
         elements.each (i) ->
           $("<#{elementName}><a href=\"##{$(this).attr("id")}\"> </a></#{elementName}>").appendTo(list).on "click", (e) ->
-            e.preventDefault()
+            #e.preventDefault()
             e.stopPropagation()
             a = $(this).find("a")
             item = $(a.attr("href"))
@@ -151,13 +151,13 @@ $.fn.mockupPreview = ( action, options ) ->
       this.settings = settings
 
       $this.on settings.showOn, (e) ->
-        e.preventDefault() 
+        #e.preventDefault() 
         e.stopPropagation()
         $this.mockupPreview("show", settings)
 
 
 
-$(".mockup-preview-container").parent("a").mockupPreview()
+$(".work-article").mockupPreview()
 
 # real simple dirty throttle
 callMethod = (target, method, args) ->
@@ -228,10 +228,10 @@ $(window).on "scroll", throttle(->
 , 200)
 
 # style fix - adjust iframe height automatically 16:9 ratio
-$(".mockup-preview-container").has("iframe").parent("a").on "mockup-preview-activate", ->
+$(".mockup-preview-container").has("iframe").parent(".work-article").on "mockup-preview-activate", ->
   iframe = $(this).find("iframe")
   iframe.height $(this).parents(".container").first().width() * (9/16)
 
-$(".mockup-preview-container").has("iframe").parent("a").on "mockup-preview-deactivate", ->
+$(".mockup-preview-container").has("iframe").parent(".work-article").on "mockup-preview-deactivate", ->
   iframe = $(this).find("iframe")
   iframe.height $(this).height()

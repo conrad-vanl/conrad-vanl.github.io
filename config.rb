@@ -1,14 +1,14 @@
 #Markdown
-activate :livereload, :host => '127.0.0.1'
+activate :livereload, :host => 'conrad.dev'
 
 sprockets.append_path File.join "#{root}", "bower_components"
 
-activate :blog do |blog|
-  blog.prefix = "work"
-  blog.permalink = ":title.html"
-  blog.sources = ":year-:month-:day-:title.html"
+activate :blog do |work|
+  work.prefix = "work"
+  work.permalink = ":title.html"
+  work.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
-  blog.layout = "layouts/work_layout"
+  work.layout = "layouts/work_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = ":year.html"
@@ -16,13 +16,14 @@ activate :blog do |blog|
   # blog.day_link = ":year/:month/:day.html"
   # blog.default_extension = ".markdown"
 
-  blog.tag_template = nil
-  blog.calendar_template = nil
+  work.tag_template = nil
+  work.calendar_template = nil
 
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/:num"
 end
+
 
 page "/feed.xml", :layout => false
 

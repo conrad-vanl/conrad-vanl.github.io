@@ -17,7 +17,7 @@ gem "middleman-livereload"
 #gem "wdm"
 #gem "rb-inotify"
 #gem "libv8"
-gem "wdm"
+#gem "wdm"
 gem "middleman-blog", "~> 3.3.0"
 
 # For feed.xml.builder
