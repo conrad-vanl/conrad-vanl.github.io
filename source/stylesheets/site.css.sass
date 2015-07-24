@@ -24,7 +24,6 @@ $grid-gutter-width: 20px
 // VENDOR
 @import "compass"
 @import "bootstrap"
-@import "_fontello/fontello"
 @import "_modules/mockup-preview"
 @import "_modules/loader"
 
@@ -85,10 +84,11 @@ h3
 .btn
   border-radius: 6px
   min-width: 100px
-  padding: 6px 15px
+  padding: 7px 15px
   font-size: 13px
   text-transform: uppercase
   font-weight: 700  
+  height: 35px
 
 .btn-default, .navbar-inverse .btn-default, .navbar-inverse .nvabar-nav > li > .btn-default
   background: none
@@ -112,6 +112,13 @@ h3
     color: #fff !important
     background: $brand-purple
     border-color: $brand-purple
+
+.btn, .btn-primary 
+  .icon 
+    vertical-align: middle
+    margin-top: 3px
+    display: inline-block
+    padding-right: 5px
 
 .navbar-nav
   li
@@ -179,6 +186,7 @@ h3
 // profile
 #profile
   text-align: center
+  height: 100vh
 
   p 
     font-size: 20px
@@ -186,6 +194,11 @@ h3
     color: rgba(255,255,255,.7)
     line-height: 24px
     padding-bottom: 10px
+
+.profile-container
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
 
 .profile-bits
   padding-top: 100px
@@ -208,23 +221,27 @@ h3
     margin: 0px auto
 
     li
-      @include make-xs-column(3)
+      @include make-xs-column(12/5)
       text-align: center
 
       a
         display: inline-block
         width: 74px
         height: 74px
-        line-height: 77px
+        line-height: 84px
         padding: 0
         border-radius: 37px
-        font-size: 30px
+        font-size: 32px
         color: rgba(255,255,255,.7)
 
       &.connect-dribbble a
         background: #99678a
         &:hover
           background: adjust-saturation(lighten(#99678a, 15%), 20%)
+      &.connect-medium a
+        background: #849C92
+        &:hover
+          background: adjust-saturation(lighten(#849C92, 15%), 20%)
       &.connect-github a
         background: #848ca1
         &:hover

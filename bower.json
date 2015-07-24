@@ -1,12 +1,13 @@
 {
   "name": "conrad-vanl",
   "version": "1.0.0",
-
   "dependencies": {
     "jquery": "2.0.3",
     "jquery.smooth-scroll": "1.4.12",
-    "letteringjs":"https://github.com/davatron5000/Lettering.js.git",
+    "letteringjs": "https://github.com/davatron5000/Lettering.js.git",
     "vague.js": "https://github.com/GianlucaGuarini/Vague.js.git",
-    "magnific-popup": "0.9.6"
+    "magnific-popup": "0.9.6",
+    "scrollmagic": "~2.0.5",
+    "greensock": "~1.17.0"
   }
 }
